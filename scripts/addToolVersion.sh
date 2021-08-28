@@ -137,7 +137,7 @@ addToolVersion() {
             ver_M=$(getVersionField "${version}" . 1)
             ver_m=$(getVersionField "${version}" . 2)
             ver_p=$(getVersionField "${version}" . 3)
-            elif [  ${ver_M} -eq 0 -a ${ver_m} -eq 9 -a ${ver_p} -eq 33 ]; then
+            if [  ${ver_M} -eq 0 -a ${ver_m} -eq 9 -a ${ver_p} -eq 33 ]; then
                 SedExpr1="${SedExpr1}\n    select LIBC_UCLIBC_0_9_33_2_or_later"
             fi
             ;;
